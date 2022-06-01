@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="500pt"
+   version="1.1"
+   height="404pt"
+   viewBox="0 0 500 404"
+   id="svg3095"
+   sodipodi:docname="elizabethline.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3097"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="1.1695545"
+     inkscape:cx="333.0328"
+     inkscape:cy="268.90582"
+     inkscape:window-width="3840"
+     inkscape:window-height="2033"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3095" />
+  <defs
+     id="defs3088" />
+  <path
+     style="fill:none;stroke:#9264cc;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="M 417,202 C 417,294.235 342.235,369 250,369 157.7685,369 83,294.235 83,202 83,109.7685 157.7685,35 250,35 c 92.235,0 167,74.7685 167,167 z"
+     id="path3090" />
+  <path
+     style="fill:#0019a8;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 0,163.323 h 500 v 77 H 0 Z"
+     id="path3092" />
+</svg>

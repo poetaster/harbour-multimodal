@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="283.465pt" height="283.465pt" viewBox="0 0 283.465 283.465" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <path id="GlDejaVuSansCondensed-Bold40" d="M0.825156 2.71 L5.39063 2.71 L5.39063 4.13078 L2.51953 4.13078 L2.51953 5.48828 L5.21969 5.48828 L5.21969 6.90922 L2.51953 6.90922 L2.51953 8.57906 L5.48828 8.57906 L5.48828 10 L0.825156 10 L0.825156 2.71 Z"/>
+  <path id="GlDejaVuSansCondensed-Bold38" d="M6.03031 9.59953 C5.71781 9.77859 5.39307 9.9137 5.05609 10.0048 C4.71922 10.096 4.36849 10.1416 4.00391 10.1416 C2.91016 10.1416 2.04427 9.80224 1.40625 9.12359 C0.768229 8.44484 0.449219 7.52443 0.449219 6.36234 C0.449219 5.19693 0.768229 4.2749 1.40625 3.59625 C2.04427 2.9175 2.91016 2.57813 4.00391 2.57813 C4.36849 2.57813 4.71922 2.6237 5.05609 2.71484 C5.39307 2.80599 5.71781 2.94109 6.03031 3.12016 L6.03031 4.62891 C5.71458 4.3913 5.40453 4.21719 5.10016 4.10656 C4.79578 3.99583 4.47594 3.94047 4.14063 3.94047 C3.53521 3.94047 3.05995 4.15531 2.71484 4.585 C2.36984 5.01469 2.19734 5.60714 2.19734 6.36234 C2.19734 7.11422 2.36984 7.705 2.71484 8.13469 C3.05995 8.56438 3.53521 8.77922 4.14063 8.77922 C4.47594 8.77922 4.79578 8.72391 5.10016 8.61328 C5.40453 8.50255 5.71458 8.32839 6.03031 8.09078 L6.03031 9.59953 Z"/>
+ </defs>
+ <g id="Background" inkscape:groupmode="layer" inkscape:label="Background">
+  <path d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z" transform="translate(0, 0)" style="fill:#dadada; fill-rule:evenodd;stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none; stroke:#171615;"/>
+ </g>
+ <g id="ICE" inkscape:groupmode="layer" inkscape:label="ICE">
+  <g transform="translate(0, 30.5332)">
+   <use xlink:href="#GlDejaVuSansCondensed-Bold40" transform="matrix(19.8 0 0 19.8 16.905 -14.2119)" style="fill:#171615;stroke:none;"/>
+   <use xlink:href="#GlDejaVuSansCondensed-Bold38" transform="matrix(19.8 0 0 19.8 134.645 -14.2119)" style="fill:#171615;stroke:none;"/>
+   <path d="M0 0 L282.916 0 L282.916 237.298 L0 237.298 L0 0 Z" style="fill:none; stroke:none;"/>
+  </g>
+ </g>
+</svg>

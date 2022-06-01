@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="404pt" viewBox="0 0 500 404" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs/>
+ <g id="Background">
+  <path style="fill:none;stroke:#ee7c10; stroke-width:70; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M334 167 C334 259.235 259.235 334 167 334 C74.7685 334 0 259.235 0 167 C0 74.7685 74.7685 0 167 0 C259.235 0 334 74.7685 334 167 Z" transform="translate(83, 35)"/>
+  <path style="fill:#004a94; fill-rule:evenodd;stroke:none;" d="M0 0 L500 0 L500 77 L0 77 L0 0 Z" transform="translate(0, 163.323)"/>
+ </g>
+</svg>

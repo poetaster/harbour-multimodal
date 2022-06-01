@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+X-Nemo-Application-Type=generic
+Name=MultiModal
+Icon=harbour-multimodal
+Exec=sailjail -p harbour-multimodal.desktop /usr/bin/sailfish-qml harbour-multimodal
+
+X-Desktop-File-Install-Version=0.26
+
+[X-Sailjail]
+Permissions=Internet;Location
+OrganizationName=app.qml
+ApplicationName=multimodal
+

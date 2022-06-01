@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 283.465 283.465" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="283.465pt" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" height="283.465pt">
+ <defs>
+  <path d="M4.43844 6.58203 C4.6501 6.65359 4.85599 6.80656 5.05609 7.04094 C5.2563 7.27531 5.45734 7.5976 5.65922 8.00781 L6.66016 10 L5.60062 10 L4.66797 8.12984 C4.42714 7.64161 4.19359 7.31776 3.96734 7.15828 C3.74109 6.9987 3.43266 6.91891 3.04203 6.91891 L1.96781 6.91891 L1.96781 10 L0.981406 10 L0.981406 2.71 L3.20797 2.71 C4.0413 2.71 4.66302 2.88417 5.07313 3.2325 C5.48333 3.58073 5.68844 4.10641 5.68844 4.80953 C5.68844 5.26849 5.58182 5.64938 5.36859 5.95219 C5.15547 6.2549 4.84542 6.46484 4.43844 6.58203 L4.43844 6.58203 Z M1.96781 3.52047 L1.96781 6.10844 L3.20797 6.10844 C3.68328 6.10844 4.04219 5.99859 4.28469 5.77891 C4.52719 5.55911 4.64844 5.23599 4.64844 4.80953 C4.64844 4.38307 4.52719 4.06161 4.28469 3.84516 C4.04219 3.6287 3.68328 3.52047 3.20797 3.52047 L1.96781 3.52047 Z" id="GlDejaVuSans53"/>
+  <path d="M0.981406 2.71 L5.59078 2.71 L5.59078 3.54 L1.96781 3.54 L1.96781 5.69828 L5.43953 5.69828 L5.43953 6.52828 L1.96781 6.52828 L1.96781 9.16984 L5.67875 9.16984 L5.67875 10 L0.981406 10 L0.981406 2.71 Z" id="GlDejaVuSans40"/>
+ </defs>
+ <g inkscape:groupmode="layer" id="Background" inkscape:label="Background">
+  <path transform="translate(0, 0)" d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z" style="fill:#dadada; fill-rule:evenodd;stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none; stroke:#171615;"/>
+ </g>
+ <g inkscape:groupmode="layer" id="RB" inkscape:label="RB">
+  <g transform="translate(-2.84217e-14, 30.6698)">
+   <use transform="matrix(19.4 0 0 19.4 20.285 -13.9248)" xlink:href="#GlDejaVuSans53" style="fill:#171615;stroke:none;"/>
+   <use transform="matrix(19.4 0 0 19.4 139.465 -13.9248)" xlink:href="#GlDejaVuSans40" style="fill:#171615;stroke:none;"/>
+   <path d="M0 0 L282.916 0 L282.916 251.776 L0 251.776 L0 0 Z" style="fill:none; stroke:none;"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="283.465pt" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="283.465pt" viewBox="0 0 283.465 283.465" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <path d="M0.0489062 2.71 L6.76766 2.71 L6.76766 4.13078 L4.35062 4.13078 L4.35062 10 L2.47078 10 L2.47078 4.13078 L0.0489062 4.13078 L0.0489062 2.71 Z" id="GlDejaVuSans-Bold55"/>
+  <path d="M7.47078 9.45797 C7.00203 9.68589 6.51536 9.85682 6.01078 9.97078 C5.5062 10.0846 4.98536 10.1416 4.44828 10.1416 C3.23411 10.1416 2.27219 9.80224 1.5625 9.12359 C0.852917 8.44484 0.498125 7.52443 0.498125 6.36234 C0.498125 5.18714 0.859427 4.26266 1.58203 3.58891 C2.30474 2.91505 3.29432 2.57813 4.55078 2.57813 C5.03578 2.57813 5.50047 2.6237 5.94484 2.71484 C6.38922 2.80599 6.80833 2.94109 7.20219 3.12016 L7.20219 4.62891 C6.79531 4.39776 6.39083 4.22526 5.98875 4.11141 C5.58677 3.99745 5.18396 3.94047 4.78031 3.94047 C4.03156 3.94047 3.45453 4.14964 3.04922 4.56797 C2.64401 4.9862 2.44141 5.58432 2.44141 6.36234 C2.44141 7.1338 2.63672 7.72948 3.02734 8.14937 C3.41797 8.56927 3.97297 8.77922 4.69234 8.77922 C4.88766 8.77922 5.06911 8.76703 5.23672 8.74266 C5.40443 8.71828 5.555 8.68005 5.68844 8.62797 L5.68844 7.21188 L4.54109 7.21188 L4.54109 5.95219 L7.47078 5.95219 L7.47078 9.45797 Z" id="GlDejaVuSans-Bold42"/>
+  <path d="M0.0489062 2.71 L1.93844 2.71 L3.87203 8.09078 L5.80078 2.71 L7.69047 2.71 L4.99031 10 L2.74906 10 L0.0489062 2.71 Z" id="GlDejaVuSans-Bold57"/>
+ </defs>
+ <g id="Background" inkscape:groupmode="layer" inkscape:label="Background">
+  <path d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z" style="fill:#dadada; fill-rule:evenodd;stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none; stroke:#171615;" transform="translate(0, 0)"/>
+ </g>
+ <g id="ICE" inkscape:groupmode="layer" inkscape:label="ICE">
+  <g transform="translate(0, 69.5642)">
+   <use xlink:href="#GlDejaVuSans-Bold55" style="fill:#171615;stroke:none;" transform="matrix(12.2 0 0 12.2 4.715 -8.75684)"/>
+   <use xlink:href="#GlDejaVuSans-Bold42" style="fill:#171615;stroke:none;" transform="matrix(12.2 0 0 12.2 85.475 -8.75684)"/>
+   <use xlink:href="#GlDejaVuSans-Bold57" style="fill:#171615;stroke:none;" transform="matrix(12.2 0 0 12.2 183.135 -8.75684)"/>
+   <path d="M0 0 L282.806 0 L282.806 214.36 L0 214.36 L0 0 Z" style="fill:none; stroke:none;"/>
+  </g>
+ </g>
+</svg>

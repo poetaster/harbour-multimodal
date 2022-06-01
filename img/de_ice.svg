@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 283.465 283.465" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="283.465pt" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" height="283.465pt">
+ <defs>
+  <path d="M1.46969 2.71 L3.15922 2.71 L1.87984 10 L0.190469 10 L1.46969 2.71 Z" id="GlDejaVuSansCondensed-BoldOblique44"/>
+  <path d="M5.45406 9.65813 C5.05042 9.81771 4.66224 9.93818 4.28953 10.0195 C3.91682 10.1009 3.56448 10.1416 3.2325 10.1416 C2.35031 10.1416 1.64552 9.87302 1.11813 9.33594 C0.590833 8.79885 0.327188 8.0876 0.327188 7.20219 C0.327188 6.61948 0.410156 6.07016 0.576094 5.55422 C0.742135 5.03828 0.987917 4.56708 1.31344 4.14063 C1.6976 3.63927 2.15984 3.25354 2.70016 2.98344 C3.24057 2.71323 3.82328 2.57813 4.44828 2.57813 C4.78682 2.57813 5.12781 2.62292 5.47125 2.7125 C5.81469 2.80198 6.1638 2.93786 6.51859 3.12016 L6.24516 4.62891 C5.96193 4.3913 5.6787 4.21719 5.39547 4.10656 C5.11234 3.99583 4.80802 3.94047 4.4825 3.94047 C3.80542 3.94047 3.23818 4.23021 2.78078 4.80969 C2.32339 5.38906 2.09469 6.11328 2.09469 6.98234 C2.09469 7.54224 2.23547 7.98172 2.51703 8.30078 C2.7987 8.61974 3.18693 8.77922 3.68172 8.77922 C3.97786 8.77922 4.29193 8.71984 4.62391 8.60109 C4.95599 8.48224 5.32875 8.29589 5.74219 8.04203 L5.45406 9.65813 Z" id="GlDejaVuSansCondensed-BoldOblique38"/>
+  <path d="M1.46969 2.71 L6.03031 2.71 L5.78125 4.13078 L2.91016 4.13078 L2.67094 5.48828 L5.37594 5.48828 L5.11719 6.90922 L2.42188 6.90922 L2.12891 8.57906 L5.09281 8.57906 L4.85359 10 L0.190469 10 L1.46969 2.71 Z" id="GlDejaVuSansCondensed-BoldOblique40"/>
+ </defs>
+ <g inkscape:groupmode="layer" id="Background" inkscape:label="Background">
+  <path transform="translate(0, 0)" d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z" style="fill:#dadada; fill-rule:evenodd;stroke-width:1; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none; stroke:#171615;"/>
+ </g>
+ <g inkscape:groupmode="layer" id="ICE" inkscape:label="ICE">
+  <g transform="translate(-2.84217e-14, 41.5642)">
+   <use transform="matrix(17.5 0 0 17.5 3.875 -12.561)" xlink:href="#GlDejaVuSansCondensed-BoldOblique44" style="fill:#171615;stroke:none;"/>
+   <use transform="matrix(17.5 0 0 17.5 58.875 -12.561)" xlink:href="#GlDejaVuSansCondensed-BoldOblique38" style="fill:#171615;stroke:none;"/>
+   <use transform="matrix(17.5 0 0 17.5 170.875 -12.561)" xlink:href="#GlDejaVuSansCondensed-BoldOblique40" style="fill:#171615;stroke:none;"/>
+   <path d="M0 0 L282.916 0 L282.916 205.267 L0 205.267 L0 0 Z" style="fill:none; stroke:none;"/>
+  </g>
+ </g>
+</svg>

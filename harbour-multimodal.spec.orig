@@ -1,0 +1,70 @@
+Summary:        multimodal
+Name:           harbour-multimodal
+Version:        0.72
+Release:        1
+License:        anarchist copyleft license version 1 
+Source:         %{name}.tar.gz
+BuildRoot:      %{_tmppath}/%{name}-build
+Group:          Qt/Qt
+
+Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   pyotherside-qml-plugin-python3-qt5
+Requires:   libsailfishapp-launcher
+
+%define _build_id_links none
+
+%description
+Public Transit App
+
+%prep
+
+%setup -n %{name}
+
+%build
+
+%install
+mkdir -p $RPM_BUILD_ROOT/usr/share/harbour-multimodal
+mkdir -p $RPM_BUILD_ROOT/usr/share/applications
+
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/86x86/apps
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/108x108/apps/
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/128x128/apps/
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/172x172/apps/
+
+install -m 644 icons/hicolor/scalable/apps/harbour-multimodal.svg $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/
+install -m 644 icons/hicolor/86x86/apps/harbour-multimodal.png $RPM_BUILD_ROOT/usr/share/icons/hicolor/86x86/apps/
+install -m 644 icons/hicolor/108x108/apps/harbour-multimodal.png $RPM_BUILD_ROOT/usr/share/icons/hicolor/108x108/apps/
+install -m 644 icons/hicolor/128x128/apps/harbour-multimodal.png $RPM_BUILD_ROOT/usr/share/icons/hicolor/128x128/apps/
+install -m 644 icons/hicolor/172x172/apps/harbour-multimodal.png $RPM_BUILD_ROOT/usr/share/icons/hicolor/172x172/apps/
+
+cp harbour-multimodal.desktop $RPM_BUILD_ROOT/usr/share/applications/
+cp -vr qml $RPM_BUILD_ROOT/usr/share/harbour-multimodal/
+cp -vr src $RPM_BUILD_ROOT/usr/share/harbour-multimodal/
+cp -vr img $RPM_BUILD_ROOT/usr/share/harbour-multimodal/
+cp -v route.db $RPM_BUILD_ROOT/usr/share/harbour-multimodal/
+cp -v harbour-multimodal.spec $RPM_BUILD_ROOT/usr/share/harbour-multimodal/
+
+desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*.desktop
+
+%post
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+rm -rf %{_tmppath}/%{name}
+rm -rf %{_topdir}/BUILD/%{name}
+
+%files
+%defattr(-,root,root)
+%{_datadir}/%{name}
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
+%{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+%{_datadir}/icons/hicolor/108x108/apps/%{name}.png
+%{_datadir}/icons/hicolor/172x172/apps/%{name}.png
+%{_datadir}/icons/hicolor/128x128/apps/%{name}.png
+
+%changelog
+* Sat May 29 2021  anarchy_in_the_uk
+- 0.1 r1 release
+
