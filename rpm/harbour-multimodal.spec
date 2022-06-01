@@ -10,7 +10,7 @@ Name:       harbour-multimodal
 
 
 Summary:        multimodal
-Version:        0.83
+Version:        0.84
 Release:        1
 License:        anarchist copyleft license version 1 
 Source0:        %{name}-%{version}.tar.bz2
