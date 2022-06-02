@@ -222,11 +222,11 @@ Page {
 
   function request_data() {
     data_requested = true
-    python.r_get_mode_status(['national-rail','tflrail','overground','tube', 'tram'])
+    python.r_get_mode_status(['national-rail','elizabeth-line','overground','tube', 'tram'])
   }
 
   function populate_lines() {
-    var lines = python.get_lines(['national-rail','tflrail','overground','tube', 'tram'])
+    var lines = python.get_lines(['national-rail','elizabeth-line','overground','tube', 'tram'])
     if (!lines) return;
 
     lines.sort(function(a, b){
@@ -319,7 +319,7 @@ Page {
     const mode_values = {
       'tube': 1,
       'overground': 2,
-      'tflrail': 3,
+      'elizabeth-line': 3,
       'tram': 4,
       'national-rail': 5,
       'bus': 6, 
