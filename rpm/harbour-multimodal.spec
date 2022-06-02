@@ -12,7 +12,7 @@ Name:       harbour-multimodal
 Summary:        multimodal
 Version:        0.85
 Release:        1
-License:        anarchist copyleft license version 1 
+License:        MIT
 Source0:        %{name}-%{version}.tar.bz2
 BuildArch:  	noarch
 Group:          Qt/Qt
