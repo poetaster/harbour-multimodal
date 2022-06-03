@@ -29,6 +29,24 @@ BuildRequires:  desktop-file-utils
 %description
 Public Transit App
 
+%if "%{?vendor}" == "chum"
+PackageName: harbour-multimodal
+Type: desktop-application
+Categories:
+ - Maps
+ - Utility
+ - News
+DeveloperName: anarchy_in_the_uk
+PackagerName: Mark Washeim (poetaster)
+Custom:
+ - Repo: https://github.com/poetaster/harbour-multimodal
+Icon: https://raw.githubusercontent.com/poetaster/harbour-multimodal/master/screenshot-1.png
+Screenshots:
+ - https://raw.githubusercontent.com/poetaster/harbour-multimodal/master/screenshot-1.png
+ - https://raw.githubusercontent.com/poetaster/harbour-multimodal/master/screenshot-2.png
+ - https://raw.githubusercontent.com/poetaster/harbour-multimodal/master/screenshot-3.png
+%endif
+
 %prep
 %setup -q -n %{name}-%{version}
 
