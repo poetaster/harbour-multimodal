@@ -57,7 +57,7 @@ Page
       fontSizeMode: Text.Fit
       minimumPixelSize: Theme.fontSizeExtraSmall
       font.pixelSize: Theme.fontSizeMedium
-      text: stop_point.name
+      text: stop_point ? stop_point.name : ''
     }
 
     Label {
@@ -68,10 +68,10 @@ Page
         leftMargin: Theme.paddingMedium
         right: distance_label.left
       }
-      visible: stop_point.towards.length > 0 || stop_point.fare_zone.length > 0
+      visible: stop_point ? (stop_point.towards.length > 0 || stop_point.fare_zone.length > 0) : ''
       truncationMode: TruncationMode.Fade
       font.pixelSize: Theme.fontSizeExtraSmall
-      text: stop_point.towards.length > 0 ? (stop_point.heading.length ? main_handler.letter_to_direction('>' + stop_point.heading) : '') + stop_point.towards : (stop_point.fare_zone.length > 0 ? (stop_point.heading.length ? main_handler.letter_to_direction('>' + stop_point.heading) : '') + 'Zone: ' + stop_point.fare_zone : '' )
+      text: stop_point ? (stop_point.towards.length > 0 ? (stop_point.heading.length ? main_handler.letter_to_direction('>' + stop_point.heading) : '') + stop_point.towards : (stop_point.fare_zone.length > 0 ? (stop_point.heading.length ? main_handler.letter_to_direction('>' + stop_point.heading) : '') + 'Zone: ' + stop_point.fare_zone : '' )) : ''
     }
     
     Label {
@@ -84,7 +84,7 @@ Page
       }
       truncationMode: TruncationMode.Fade
       font.pixelSize: Theme.fontSizeExtraSmall
-      text: stop_point.lines.replace(/,/g, '·')
+      text: stop_point ? stop_point.lines.replace(/,/g, '·') : ''
     }
 
     Label {
@@ -98,6 +98,7 @@ Page
       truncationMode: TruncationMode.Fade
       font.pixelSize: Theme.fontSizeExtraSmall
       text: {
+        if (!stop_point) return '';
         const distance = main_handler.calculate_distance(pos_latitude, pos_longitude, stop_point.lat, stop_point.lon);
         return distance >= 1000.0 ? (distance / 1000).toFixed(1) + 'km': Math.round(distance) + "m"
       } 
@@ -105,11 +106,11 @@ Page
 
     ModesIconsWidget {
       id: icons_widget
-      stop_numbering_area: stop_point.numbering_area
-      stop_dataset_id: stop_point.dataset_id
-      stop_modes: stop_point.modes
-      stop_stop_type: stop_point.stop_type
-      stop_stop_letter: stop_point.stop_letter
+      stop_numbering_area: stop_point ? stop_point.numbering_area : 0
+      stop_dataset_id: stop_point ? stop_point.dataset_id : 0
+      stop_modes: stop_point ? stop_point.modes : ''
+      stop_stop_type: stop_point ? stop_point.stop_type : 0
+      stop_stop_letter: stop_point ? stop_point.stop_letter : ''
 
       anchors {
         right: parent.right
@@ -142,19 +143,6 @@ Page
     Row {
       anchors {
         top: parent.top
-      }
-      
-      Switch { 
-        icon.source: "image://theme/icon-m-call-recording-off" 
-        onCheckedChanged: {
-          follow_location = checked
-          if (follow_location) {
-            map.center = QtPositioning.coordinate(pos_latitude, pos_longitude)
-            map.setPaintProperty("location", "circle-color", "green")
-          } else {
-            map.setPaintProperty("location", "circle-color", "blue")
-          }
-        }
       }
     }
   }
@@ -204,17 +192,25 @@ Page
           if (mouse.y < panel_top.height) {
             stop_point = undefined
           } else if (mouse.y > map.height - panel_bottom.height) {
-            panel_bottom.open = !panel_bottom.open
+            //Bottom pannel disabled, left in for future use
+            //panel_bottom.open = !panel_bottom.open
           }
         }
-        onDoubleClicked: console.log("Double click: " + mouse)
-        onPressAndHold: console.log("Press and hold: " + mouse)
+  
+        onPressAndHold: console.log("Press and hold: ", mouse.x, mouse.y)
+
+        onDoubleClicked: {
+          console.log("Double click: ", mouse.x, mouse.y)
+          position_marker_item.visible = !position_marker_item.visible
+          if (!position_marker_item.visible) stop_point = null
+        }
 
         onClickedGeo: {
           console.log("Click geo: " + geocoordinate + " sensitivity: " + degLatPerPixel + " " + degLonPerPixel)
           request_stop(geocoordinate.latitude, geocoordinate.longitude)
         }
         onDoubleClickedGeo: {
+          console.log("DoubleClick geo: " + geocoordinate + " sensitivity: " + degLatPerPixel + " " + degLonPerPixel)
         }
         onPressAndHoldGeo: {
           
@@ -229,6 +225,54 @@ Page
         app.settings.history.map_zoom = map.zoomLevel
       }
     }
+
+    Rectangle {                                                         
+      id: position_marker_item                                   
+      anchors {
+        right: parent.right
+        bottom: parent.bottom
+        rightMargin: Theme.paddingLarge
+        bottomMargin: Theme.paddingLarge
+      }      
+
+      color: "lightgrey"
+      width: Theme.itemSizeSmall
+      height: width                                                                                                                                          
+      radius: width/2
+
+      Rectangle {
+        height: position_marker_item.height * 0.63
+        width: height
+        radius: width/2
+        color: "grey"
+        anchors.centerIn: parent
+      }
+
+      Rectangle {
+        height: position_marker_item.height * 0.3
+        width: height
+        radius: width/2
+        color: follow_location ? "green" : "blue"
+        anchors.centerIn: parent
+      }
+
+      MouseArea {
+        anchors.fill: parent
+        onClicked: {
+          follow_location = !follow_location
+          if (follow_location) {
+            map.center = QtPositioning.coordinate(pos_latitude, pos_longitude)
+            map.setPaintProperty("location", "circle-color", "green")
+          } else {
+            map.setPaintProperty("location", "circle-color", "blue")
+          }
+        }
+      }                                                                                                                                         
+    } 
+
+
+
+
   }
 
   Component.onCompleted: {
@@ -311,6 +355,7 @@ Page
   function a_geo_stop(stop) {
     if (!stop) return;
     stop_point = stop
+    position_marker_item.visible = true
   }
 
   function a_geo_stops(stops) {
