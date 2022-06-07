@@ -23,7 +23,7 @@ ApplicationWindow {
   signal signal_reload_data()
   signal signal_error(string module_id, string method_id, string description)
 
-  property string version: '0.87'
+  property string version: '0.88'
   property bool use_location: false
 
   property var settings
