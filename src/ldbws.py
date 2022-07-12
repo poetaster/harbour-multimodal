@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import pyotherside
 from datetime import datetime, timedelta
@@ -11,6 +10,9 @@ class Ldbws:
 
   def __init__(self):
     print('ldbws init')
+
+  def format_error(self, err):
+    return '%s' % err
     
   def ak(self, data, *keys):
     for key in keys:
@@ -115,6 +117,10 @@ class Ldbws:
     try:
       client = LdbwsClient()
       board = client.get_departures_board(stop_code, self.MAX_RESULTS, self.TIME_WINDOW, to_stop_code)
+      if not board:
+        pyotherside.send("error", "ldbws", "r_get_departures", "No results")
+        return
+
       services = []
       if 'trainServices' in board:
         for ts in board['trainServices']:
@@ -184,13 +190,17 @@ class Ldbws:
       if 'nrccMessages' in board:
         pyotherside.send("a_get_station_messages", board['nrccMessages'])
     except Exception as err:
-      pyotherside.send("error", "ldbws", "r_get_departures", err)
+      pyotherside.send("error", "ldbws", "r_get_departures", self.format_error(err))
 
   def r_get_arrivals(self, stop_code, to_stop_code=None):
     print('r_get_arrivals - requesting station board for code:', stop_code)
     try:
       client = LdbwsClient()
       board = client.get_arrivals_board(stop_code, self.MAX_RESULTS, self.TIME_WINDOW, to_stop_code)
+      if not board:
+        pyotherside.send("error", "ldbws", "r_get_arrivals", "No results")
+        return
+
       services = []
       if 'trainServices' in board:
         for ts in board['trainServices']:          
@@ -262,7 +272,7 @@ class Ldbws:
         pyotherside.send("a_get_station_messages", board['nrccMessages'])
 
     except Exception as err:
-      pyotherside.send("error", "ldbws", "r_get_arrivals", err)
+      pyotherside.send("error", "ldbws", "r_get_arrivals", self.format_error(err))
 
 
   def r_get_next_departures(self, stop_code, destination_code):
@@ -271,7 +281,7 @@ class Ldbws:
     client = LdbwsClient()
     #board = client.get_next_departures(stop_code, destination_code)
     pyotherside.send("a_get_predictions", [])
-    pyotherside.send("error", "ldbws", "r_get_next_departures", err)
+    pyotherside.send("error", "ldbws", "r_get_next_departures", self.format_error(err))
 
 
   def r_get_fastest_departures(self, stop_code, destination_code):
@@ -279,6 +289,9 @@ class Ldbws:
 
     client = LdbwsClient()
     board = client.get_fastest_departures(stop_code, destination_code)
+    if not board:
+      pyotherside.send("error", "ldbws", "r_get_fastest_departures", "No results")
+      return
 
     services = []
     try:
@@ -320,13 +333,16 @@ class Ldbws:
 
       pyotherside.send("a_get_predictions_fastest", services)
     except Exception as err:
-      pyotherside.send("error", "ldbws", "r_get_fastest_departures", err)
+      pyotherside.send("error", "ldbws", "r_get_fastest_departures", self.format_error(err))
 
   def r_get_service_details(self, service_id, origin_codes = [], destination_codes = []):
     print('r_get_service_details - requesting service:', service_id, ', origin: ', origin_codes, ', destination: ', destination_codes)
     try:
       client = LdbwsClient()
       service_details = client.get_service_details(service_id)     
+      if not service_details:
+        pyotherside.send("error", "ldbws", "r_get_service_details", "No results")
+        return
 
       calling_point_sets = []
       if 'previousCallingPoints' in service_details:
@@ -400,7 +416,7 @@ class Ldbws:
       pyotherside.send("a_get_vehicle_predictions", calling_point_sets)
 
     except Exception as err:
-      pyotherside.send("error", "ldbws", "r_get_service_details", err)
+      pyotherside.send("error", "ldbws", "r_get_service_details", self.format_error(err))
 
   def operator_to_line(self, operator_code):
     lines = {
