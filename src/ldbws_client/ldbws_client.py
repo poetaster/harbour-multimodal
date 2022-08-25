@@ -45,7 +45,7 @@ class LdbwsClient:
 	xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
 	<SOAP-ENV:Header>
 		<tns:AccessToken>
-			<tns:TokenValue>API-ID</tns:TokenValue>
+                       <tns:TokenValue>API-ID</tns:TokenValue>
 		</tns:AccessToken>
 	</SOAP-ENV:Header>
 	<ns1:Body>

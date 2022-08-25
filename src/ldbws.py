@@ -149,7 +149,7 @@ class Ldbws:
             'main_color':         self.main_color(self.operator_to_line(ts['operatorCode'])),
             'mark_color':         self.mark_color(self.operator_to_line(ts['operatorCode'])),
             'text_color':         self.line_text_color(self.operator_to_line(ts['operatorCode'])),
-            'icon_name':               self.operator_to_icon(ts['operatorCode']),
+            'icon_name':          self.operator_to_icon(ts['operatorCode']),
           }
 
           services.append(multimodal_structures.timetable_entry(te))
@@ -181,7 +181,7 @@ class Ldbws:
             'main_color':         self.main_color(self.operator_to_line(ts['operatorCode'])),
             'mark_color':         self.mark_color(self.operator_to_line(ts['operatorCode'])),
             'text_color':         self.line_text_color(self.operator_to_line(ts['operatorCode'])),
-            'icon_name':               'bus',
+            'icon_name':          'ldbws_bus',
           }
 
           services.append(multimodal_structures.timetable_entry(te))
@@ -229,7 +229,7 @@ class Ldbws:
             'main_color':         self.main_color(self.operator_to_line(ts['operatorCode'])),
             'mark_color':         self.mark_color(self.operator_to_line(ts['operatorCode'])),
             'text_color':         self.line_text_color(self.operator_to_line(ts['operatorCode'])),
-            'icon_name':               self.operator_to_icon(ts['operatorCode']),
+            'icon_name':          self.operator_to_icon(ts['operatorCode']),
           }
 
           services.append(multimodal_structures.timetable_entry(te))
@@ -261,7 +261,7 @@ class Ldbws:
             'main_color':         self.main_color(self.operator_to_line(ts['operatorCode'])),
             'mark_color':         self.mark_color(self.operator_to_line(ts['operatorCode'])),
             'text_color':         self.line_text_color(self.operator_to_line(ts['operatorCode'])),
-            'icon_name':               'bus',
+            'icon_name':          'ldbws_bus',
           }
 
           services.append(multimodal_structures.timetable_entry(te))

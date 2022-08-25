@@ -30,7 +30,7 @@ Component {
       width: visible ? 45 : 0
       fillMode: Image.PreserveAspectFit
       source: timetable_entry.icon_name ? "../../img/"+String(timetable_entry.icon_name)+".svg" : ''
-      visible: Boolean(timetable_entry.icon_name && (timetable_entry.module == 'dbahn' || timetable_entry.module == 'trest'))
+      visible: Boolean(timetable_entry.icon_name && (timetable_entry.module == 'dbahn' || timetable_entry.module == 'trest' || timetable_entry.transport_mode == 'bus'))
       anchors {
         verticalCenter: destination_label.verticalCenter
         left: mark_rectangle.right
