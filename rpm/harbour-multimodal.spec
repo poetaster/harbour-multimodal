@@ -10,7 +10,7 @@ Name:       harbour-multimodal
 
 
 Summary:        multimodal
-Version:        0.92
+Version:        0.94
 Release:        1
 License:        MIT
 Source0:        %{name}-%{version}.tar.bz2
