@@ -20,6 +20,7 @@ Group:          Qt/Qt
 Requires:   	sailfishsilica-qt5 >= 0.10.9
 Requires:   	pyotherside-qml-plugin-python3-qt5
 Requires:   	libsailfishapp-launcher
+BuildRequires:  qt5-qttools-linguist
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.3
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
