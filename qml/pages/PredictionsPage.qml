@@ -307,9 +307,29 @@ Page {
       }
     }
 
+    var title = main_handler.cleanup_destination(stop_point.name)
+    if (stop_point.stop_letter && stop_point.stop_letter.length > 0) title += ' (' +  stop_point.stop_letter + ')'
+    switch(stop_point.stop_type) {
+      case 2: //Bus Stop
+      case 4: //Tram stop
+        title += ' 🚏';
+        break;
+      case 6: //Light Rail station
+      case 8: //metro station
+      case 10: //rail station
+        title += ' 🚉';
+        break;
+      case 12: //ferry port
+        title += ' 🚢';
+        break;
+      case 12: //cable car station
+        title += ' 🚡';
+        break;
+    } 
+
     main_handler.add_history({
       'page_name': 'PredictionsPage.qml',
-      'title': main_handler.cleanup_destination(stop_point.name),
+      'title': title,
       'stop_point': stop_point,
       'to_stop_point': to_stop_point,
     })

@@ -418,9 +418,37 @@ Page {
       app.signal_reload_data.connect(reload_data)
       load_calling_points();
 
+      var title_icon = '';
+      switch(timetable_entry.transport_mode) {
+        case 'national-express-rail':
+        case 'national-rail':
+        case 'regional-rail':
+        case 'regional-express-rail':
+        case 'overground':
+        case 'elizabeth-line':
+          title_icon += '🚆 ';
+          break;
+        case 'tube':
+          title_icon += '🚇 ';
+          break;
+        case 'dlr':
+          title_icon += '🚈 ';
+          break;
+        case 'tram':
+          title_icon += '🚊 ';
+          break;
+        case 'bus':
+        case 'replacement-bus':
+          title_icon += '🚍 ';
+          break;
+        case 'river-bus':
+          title_icon += '⛴️ ';
+          break;
+      } 
+
       main_handler.add_history({
         'page_name': 'CallingPointsPage.qml',
-        'title': main_handler.short_time(timetable_entry.time_expected || timetable_entry.time_planned) + ' ' + timetable_entry.title,
+        'title': main_handler.short_time(timetable_entry.time_expected || timetable_entry.time_planned) + ' ' + title_icon + timetable_entry.title,
         'stop_point': stop_point,
         'timetable_entry': timetable_entry,
       })
