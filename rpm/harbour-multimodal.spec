@@ -1,6 +1,7 @@
 Name:       harbour-multimodal
 
 # >> macros
+%define _binary_payload w2.xzdio
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -89,8 +90,9 @@ desktop-file-install --delete-original       \
 # << files
 
 %post
-sed -i 's/CLIENT-ID/fb21976dbed2d0ded50a246086440da2/' %{_datadir}/%{name}/src/dbahn_client/dbahn_client.py
-sed -i 's/API-ID/fde407a46b1014b445c162466a7a8489/' %{_datadir}/%{name}/src/dbahn_client/dbahn_client.py
+sed -i 's/CLIENT-ID/c832e0d20b3d711bd456b8dad388a7a1/' %{_datadir}/%{name}/src/dbahn_client/dbahn_client.py
+sed -i 's/API-ID/5067e18b90aa7c7f6b9b45c39f867800/' %{_datadir}/%{name}/src/dbahn_client/dbahn_client.py
+
 sed -i 's/API-ID/8650ba70-f8e8-4c44-af6f-49b1a9cc697c/' %{_datadir}/%{name}/src/ldbws_client/ldbws_client.py
 sed -i 's/OCP-AP/2682038d1d2e4d33bd114361c6dd9c58/' %{_datadir}/%{name}/src/tfgm_client/tfgm_client.py
 
