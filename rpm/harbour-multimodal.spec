@@ -12,7 +12,7 @@ Name:       harbour-multimodal
 
 Summary:        multimodal
 Version:        0.96
-Release:        1
+Release:        2
 License:        MIT
 URL:            https://openrepos.net/content/anarchyintheuk/multimodal
 Source0:        %{name}-%{version}.tar.bz2
